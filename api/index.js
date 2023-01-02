@@ -32,6 +32,8 @@ module.exports = {
           'public/uploads/logos/resize/' + hero_image
         );
 
+        
+
         ///// barcode genarate ////
         //  var canvas = createCanvas ();
         //  JsBarcode (canvas, formData.url,{
@@ -86,14 +88,14 @@ module.exports = {
 
         var mailOptions = {
           from: 'somnath.elvirainfotech@gmail.com',
-          to: 'somnath91997@gmail.com',
+          to: formData.email,
           subject: 'Google and Apple wallet digital loyalty cards with QR',
           template: 'final',
           context: {
             name: formData.name,
             text: formData.text,
             bg_color: formData.bg_color,
-            icon:`${process.env.image_url}/images/logo-top.jpg`,   ///  static image ///
+            icon:`${process.env.image_url}/images/icon.png`,   ///  static image ///
             // logo: process.env.image_url + '/uploads/logos/resize/' + image_name,
             logo: `${process.env.image_url}/images/center-logo.jpg`,
             // hero_image: process.env.image_url + '/uploads/logos/resize/' + hero_image,
@@ -218,3 +220,11 @@ async function resize2 (path, name) {
   await image.writeAsync (name);
 }
 
+async function resize3 (path, name) {
+  // Read the image.
+  const image = await Jimp.read (path);
+  // Resize the image to width 150 and heigth 150.
+  await image.resize (76, 77).quality (80);
+  // Save and overwrite the image
+  await image.writeAsync (name);
+}
