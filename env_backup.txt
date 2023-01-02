@@ -1,3 +1,4 @@
 # image_url="http://127.0.0.1:4001/app-property/images"
  
 image_url="http://digitalloyaltycards.elvirainfotech.org/app-property"
+dfdfsf
