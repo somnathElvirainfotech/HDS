@@ -41,6 +41,13 @@ build/Release
 node_modules/
 jspm_packages/
 
+# project folder ignor ------------------------------------------------------------------
+public/uploads/
+public/qrcodes/
+public/barcodes/
+# ---------------------------------------------------------------------------------------
+
+
 # TypeScript v1 declaration files
 typings/
 
