@@ -41,6 +41,13 @@ build/Release
 node_modules/
 jspm_packages/
 
+# project folder ignor ------------------------------------------------------------------
+public/uploads/
+public/qrcodes/
+public/barcodes/
+# ---------------------------------------------------------------------------------------
+
+
 # TypeScript v1 declaration files
 typings/
 
@@ -102,3 +109,7 @@ dist
 
 # TernJS port file
 .tern-port
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
